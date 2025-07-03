@@ -1,0 +1,29 @@
+baseURL: "https://sherlockramos.blog"
+languageCode: "pt-br"
+title: "SherlockRamos"
+theme: "PaperMod"
+
+caches:
+  images:
+    dir: ":cacheDir/images"
+
+params:
+  profileMode:
+    enabled: true
+    title: "SherlockRamos" # default will be site title
+    subtitle: "Bem-vindo ao blog do Sherlock Ramos"
+    imageUrl: "https://pbs.twimg.com/profile_images/1848910652808613888/r81-u5pP_400x400.jpg"
+    imageTitle: "Foto de Sherlock Ramos"
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: "Twitter"
+        url: "https://x.com/GatoMaconhado_"
+      - name: "GitHub"
+        url: "https://github.com/sherlockramos"
+
+  socialIcons:
+    - name: "GitHub"
+      url: "https://github.com/sherlockramos"
+    - name: "LinkedIn"
+      url: "https://linkedin.com/in/sherlockramos"
