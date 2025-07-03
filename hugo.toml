@@ -1,0 +1,8 @@
+baseURL = 'https://sherlockramos.blog'
+languageCode = 'pt-br'
+title = 'SherlockRamos'
+theme = ["PaperMod"]
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
