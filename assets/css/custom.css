@@ -1,0 +1,10 @@
+:root {
+  --color-primary: #131D4F;
+  --color-secondary-light: #EFE4D2;
+  --color-secondary-dark: #254D70;
+  --color-accent: #954C2E;
+  --theme: var(--color-primary);
+}
+body {
+  font-family: "Inter", "Roboto", sans-serif;
+}

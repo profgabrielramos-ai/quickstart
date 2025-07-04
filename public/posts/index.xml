@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on SherlockRamos</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on SherlockRamos</description>
+    <title>Blog on SherlockRamos</title>
+    <link>https://sherlockramos.life/posts/</link>
+    <description>Recent content in Blog on SherlockRamos</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 May 2024 12:00:00 -0300</lastBuildDate>
+    <atom:link href="https://sherlockramos.life/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
-&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
+      <title>Falando Abobrinha</title>
+      <link>https://sherlockramos.life/posts/abobrinha/</link>
+      <pubDate>Fri, 03 May 2024 12:00:00 -0300</pubDate>
+      <guid>https://sherlockramos.life/posts/abobrinha/</guid>
+      <description>&lt;p&gt;Apenas algumas abobrinhas para descontrair.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ferramentas de Estudo Indispensáveis</title>
+      <link>https://sherlockramos.life/posts/ferramentas-estudo/</link>
+      <pubDate>Thu, 02 May 2024 12:00:00 -0300</pubDate>
+      <guid>https://sherlockramos.life/posts/ferramentas-estudo/</guid>
+      <description>&lt;p&gt;Uma seleção de ferramentas úteis para potencializar seus estudos.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>O que é Inteligência Artificial?</title>
+      <link>https://sherlockramos.life/posts/intro-ia/</link>
+      <pubDate>Wed, 01 May 2024 12:00:00 -0300</pubDate>
+      <guid>https://sherlockramos.life/posts/intro-ia/</guid>
+      <description>&lt;p&gt;Breve introdução sobre o tema.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -2,17 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
-    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
+    <loc>https://sherlockramos.life/categories/abobrinha/</loc>
+    <lastmod>2024-05-03T12:00:00-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
+    <loc>https://sherlockramos.life/posts/</loc>
+    <lastmod>2024-05-03T12:00:00-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
+    <loc>https://sherlockramos.life/categories/</loc>
+    <lastmod>2024-05-03T12:00:00-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://sherlockramos.life/posts/abobrinha/</loc>
+    <lastmod>2024-05-03T12:00:00-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://sherlockramos.life/</loc>
+    <lastmod>2024-05-03T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://sherlockramos.life/tags/</loc>
+    <lastmod>2024-05-03T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://sherlockramos.life/tags/variedades/</loc>
+    <lastmod>2024-05-03T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://sherlockramos.life/tags/dicas/</loc>
+    <lastmod>2024-05-02T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://sherlockramos.life/categories/ferramentas-de-estudo/</loc>
+    <lastmod>2024-05-02T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://sherlockramos.life/posts/ferramentas-estudo/</loc>
+    <lastmod>2024-05-02T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://sherlockramos.life/categories/intelig%C3%AAncia-artificial/</loc>
+    <lastmod>2024-05-01T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://sherlockramos.life/tags/introducao/</loc>
+    <lastmod>2024-05-01T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://sherlockramos.life/posts/intro-ia/</loc>
+    <lastmod>2024-05-01T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://sherlockramos.life/contact/</loc>
   </url>
 </urlset>
