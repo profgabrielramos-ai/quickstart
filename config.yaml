@@ -1,7 +1,9 @@
-baseURL: "https://sherlockramos.blog"
+baseURL: "https://profgabrielramos-ai.github.io/"
 languageCode: "pt-br"
 title: "SherlockRamos"
 theme: "PaperMod"
+defaultContentLanguage: "pt"
+paginate: 10
 
 caches:
   images:
@@ -21,9 +23,44 @@ params:
         url: "https://x.com/GatoMaconhado_"
       - name: "GitHub"
         url: "https://github.com/sherlockramos"
-
   socialIcons:
+    - name: "Twitter"
+      url: "https://twitter.com/GatoMaconhado_"
+    - name: "Instagram"
+      url: "https://instagram.com/prof.gabrielramos"
     - name: "GitHub"
-      url: "https://github.com/sherlockramos"
-    - name: "LinkedIn"
-      url: "https://linkedin.com/in/sherlockramos"
+      url: "https://github.com/profgabrielramos-ai"
+  assets:
+    favicon: "images/favicon.ico"
+    customCSS: ["css/custom.css"]
+  defaultTheme: "auto"
+  ShowBreadCrumbs: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 2
+    - identifier: contato
+      name: Contato
+      url: /contato/
+      weight: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      - table
+      - linkify
+      - strikethrough
+      - taskList
+      - typographer

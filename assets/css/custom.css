@@ -1,0 +1,73 @@
+:root {
+  --primary: #131D4F;
+  --secondary: #EFE4D2;
+  --accent1: #254D70;
+  --accent2: #954C2E;
+  --font-family: 'Inter', 'Roboto', 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+a,
+.navbar a {
+  color: var(--accent1);
+  transition: color 0.2s;
+}
+
+a:hover,
+.navbar a:hover {
+  color: var(--accent2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary);
+  font-family: var(--font-family);
+}
+
+nav {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+button,
+.button {
+  background: var(--accent1);
+  color: var(--secondary);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover,
+.button:hover {
+  background: var(--accent2);
+}
+
+/* Melhorias de UX/UI */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
