@@ -11,7 +11,17 @@
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-01-14T07:07:07+01:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/abobrinha/</loc>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/contato/</loc>
+  </url><url>
+    <loc>http://localhost:1313/blog/ferramentas-de-estudo/</loc>
+  </url><url>
+    <loc>http://localhost:1313/blog/inteligencia-artificial/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url>

@@ -59,8 +59,8 @@ markup:
     renderer:
       unsafe: true
     extensions:
-      - table
-      - linkify
-      - strikethrough
-      - taskList
-      - typographer
+      table: true
+      linkify: true
+      strikethrough: true
+      taskList: true
+      typographer: true
