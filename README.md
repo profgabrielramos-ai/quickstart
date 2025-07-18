@@ -1,5 +1,7 @@
 # SherlockRamos
 
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/profgabrielramos-ai/sherlockramosblog?utm_source=oss&utm_medium=github&utm_campaign=profgabrielramos-ai%2Fsherlockramosblog&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+
 Este projeto é um blog feito com o [Hugo](https://gohugo.io/) utilizando o tema **PaperMod**.
 
 ## Como alterar cores e fontes
