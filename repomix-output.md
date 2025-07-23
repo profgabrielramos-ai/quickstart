@@ -39,34 +39,27 @@ The content is organized as follows:
     hugo.yaml
 archetypes/
   default.md
+  post.md
+assets/
+  css/
+    custom.css
 content/
+  blog/
+    abobrinha/
+      _index.md
+    ferramentas-de-estudo/
+      _index.md
+    inteligencia-artificial/
+      _index.md
+      2025-07-23-bencao.md
+    _index.md
+  contato/
+    _index.md
   posts/
     my-first-post.md
-public/
-  assets/
-    css/
-      stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css
-  categories/
-    index.html
-    index.xml
-  page/
-    1/
-      index.html
-  posts/
-    my-first-post/
-      index.html
-    page/
-      1/
-        index.html
-    index.html
-    index.xml
-  tags/
-    index.html
-    index.xml
-  404.html
-  index.html
-  index.xml
-  sitemap.xml
+  _index.md
+docs/
+  analise-e-melhorias-ux-ui.md
 themes/
   PaperMod/
     .github/
@@ -206,14 +199,24 @@ themes/
     LICENSE
     README.md
     theme.toml
+.gitignore
 .gitmodules
-hugo.toml
+config.yaml
+README.md
 ```
 
 # Files
 
+## File: content/blog/inteligencia-artificial/2025-07-23-bencao.md
+````markdown
+---
+title: "Qual a minha benção?"
+description: "Ignorando a trend para entender-mos o porquê"
+---
+````
+
 ## File: themes/PaperMod/.github/ISSUE_TEMPLATE/bug.yaml
-```yaml
+````yaml
 name: Bug Report 🐞
 description: Create a report to help us improve
 title: "[Bug]: "
@@ -326,19 +329,19 @@ body:
           required: true
     validations:
       required: true
-```
+````
 
 ## File: themes/PaperMod/.github/ISSUE_TEMPLATE/config.yml
-```yaml
+````yaml
 blank_issues_enabled: false
 contact_links:
   - name: PaperMod Discussions
     url: https://github.com/adityatelange/hugo-PaperMod/discussions
     about: Please ask and answer questions/doubts here, DO NOT open an issue for questions.
-```
+````
 
 ## File: themes/PaperMod/.github/ISSUE_TEMPLATE/enhancement.yaml
-```yaml
+````yaml
 name: Enhancement 🚀
 description: Propose a new feature or change for enhancing the experience.
 title: "[Enhancement]: "
@@ -371,10 +374,10 @@ body:
           required: true
     validations:
       required: true
-```
+````
 
 ## File: themes/PaperMod/.github/workflows/gh-pages.yml
-```yaml
+````yaml
 name: Deploy Hugo PaperMod Demo to Pages
 
 on:
@@ -452,10 +455,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-```
+````
 
 ## File: themes/PaperMod/.github/PULL_REQUEST_TEMPLATE.md
-```markdown
+````markdown
 <!--
 
 ## READ BEFORE OPENING A PR
@@ -500,10 +503,10 @@ is closed automatically when this PR is merged.
 - [ ] This change **does not** include any CDN resources/links.
 - [ ] This change **does not** include any unrelated scripts such as bash and python scripts.
 - [ ] This change updates the overridden internal templates from HUGO's repository.
-```
+````
 
 ## File: themes/PaperMod/assets/css/common/404.css
-```css
+````css
 .not-found {
     position: absolute;
     left: 0;
@@ -515,10 +518,10 @@ is closed automatically when this PR is merged.
     font-size: 160px;
     font-weight: 700;
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/common/archive.css
-```css
+````css
 .archive-posts {
     width: 100%;
     font-size: 16px;
@@ -563,10 +566,10 @@ is closed automatically when this PR is merged.
     color: var(--secondary);
     font-size: 14px;
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/common/footer.css
-```css
+````css
 .footer,
 .top-link {
     font-size: 12px;
@@ -627,10 +630,10 @@ is closed automatically when this PR is merged.
 #theme-toggle:focus {
     outline: 0;
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/common/header.css
-```css
+````css
 .nav {
     display: flex;
     flex-wrap: wrap;
@@ -724,10 +727,10 @@ body:not(.dark) #sun {
 .logo-switches {
     flex-wrap: inherit;
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/common/main.css
-```css
+````css
 .main {
     position: relative;
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
@@ -794,10 +797,10 @@ div.highlight:hover .copy-code,
 pre:hover .copy-code {
     display: block;
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/common/post-entry.css
-```css
+````css
 .first-entry {
     position: relative;
     display: flex;
@@ -905,10 +908,10 @@ pre:hover .copy-code {
     color: var(--secondary);
     box-shadow: 0 1px 0 var(--primary);
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/common/post-single.css
-```css
+````css
 .page-header,
 .post-header {
     margin: 24px auto var(--content-gap) auto;
@@ -1319,10 +1322,10 @@ img.in-text {
     display: inline;
     margin: auto;
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/common/profile-mode.css
-```css
+````css
 .buttons,
 .main .profile {
     display: flex;
@@ -1366,10 +1369,10 @@ img.in-text {
 .button:active {
     transform: scale(0.96);
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/common/search.css
-```css
+````css
 #searchbox input {
     padding: 4px 10px;
     width: 100%;
@@ -1415,10 +1418,10 @@ img.in-text {
     transform: scale(0.98);
     border: 2px solid var(--tertiary);
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/common/terms.css
-```css
+````css
 .terms-tags li {
     display: inline-block;
     margin: 10px;
@@ -1437,20 +1440,20 @@ img.in-text {
     background: var(--tertiary);
     transform: scale(0.96);
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/core/license.css
-```css
+````css
 /*
   PaperMod v8+
   License: MIT https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE
   Copyright (c) 2020 nanxiaobei and adityatelange
   Copyright (c) 2021-2025 adityatelange
 */
-```
+````
 
 ## File: themes/PaperMod/assets/css/core/reset.css
-```css
+````css
 *,
 ::after,
 ::before {
@@ -1569,10 +1572,10 @@ img {
     display: block;
     max-width: 100%;
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/core/theme-vars.css
-```css
+````css
 :root {
     --gap: 24px;
     --content-gap: 20px;
@@ -1611,10 +1614,10 @@ img {
 .dark.list {
     background: var(--theme);
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/core/zmedia.css
-```css
+````css
 @media screen and (max-width: 768px) {
     /* theme-vars */
     :root {
@@ -1670,19 +1673,19 @@ img {
         transform: none;
     }
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/extended/blank.css
-```css
+````css
 /*
 This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
 
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
-```
+````
 
 ## File: themes/PaperMod/assets/css/includes/chroma-mod.css
-```css
+````css
 .chroma {
     background-color: unset !important;
 }
@@ -1707,10 +1710,10 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 .chroma .lntd:last-of-type {
     width: 100%;
 }
-```
+````
 
 ## File: themes/PaperMod/assets/css/includes/chroma-styles.css
-```css
+````css
 /* Background */ .bg { color: #cad3f5; background-color: #24273a; }
 /* PreWrapper */ .chroma { color: #cad3f5; background-color: #24273a; }
 /* Other */ .chroma .x {  }
@@ -1797,10 +1800,10 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 /* GenericTraceback */ .chroma .gt { color: #ed8796 }
 /* GenericUnderline */ .chroma .gl { text-decoration: underline }
 /* TextWhitespace */ .chroma .w {  }
-```
+````
 
 ## File: themes/PaperMod/assets/css/includes/scroll-bar.css
-```css
+````css
 /* from reset */
 ::-webkit-scrollbar-track {
     background: 0 0;
@@ -1864,10 +1867,10 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
         height: 11px;
     }
 }
-```
+````
 
 ## File: themes/PaperMod/assets/js/fastsearch.js
-```javascript
+````javascript
 import * as params from '@params';
 
 let fuse; // holds our search engine
@@ -2020,10 +2023,10 @@ document.onkeydown = function (e) {
         ae.click(); // click on active link
     }
 }
-```
+````
 
 ## File: themes/PaperMod/assets/js/fuse.basic.min.js
-```javascript
+````javascript
 /**
  * Fuse.js v7.0.0 - Lightweight fuzzy-search (http://fusejs.io)
  *
@@ -2033,20 +2036,20 @@ document.onkeydown = function (e) {
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),n.push.apply(n,r)}return n}function t(t){for(var n=1;n<arguments.length;n++){var r=null!=arguments[n]?arguments[n]:{};n%2?e(Object(r),!0).forEach((function(e){a(t,e,r[e])})):Object.getOwnPropertyDescriptors?Object.defineProperties(t,Object.getOwnPropertyDescriptors(r)):e(Object(r)).forEach((function(e){Object.defineProperty(t,e,Object.getOwnPropertyDescriptor(r,e))}))}return t}function n(e){return n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},n(e)}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function i(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,h(r.key),r)}}function o(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),Object.defineProperty(e,"prototype",{writable:!1}),e}function a(e,t,n){return(t=h(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function c(e){return function(e){if(Array.isArray(e))return s(e)}(e)||function(e){if("undefined"!=typeof Symbol&&null!=e[Symbol.iterator]||null!=e["@@iterator"])return Array.from(e)}(e)||function(e,t){if(e){if("string"==typeof e)return s(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?s(e,t):void 0}}(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function s(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}function h(e){var t=function(e,t){if("object"!=typeof e||null===e)return e;var n=e[Symbol.toPrimitive];if(void 0!==n){var r=n.call(e,t||"default");if("object"!=typeof r)return r;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===t?String:Number)(e)}(e,"string");return"symbol"==typeof t?t:String(t)}function u(e){return Array.isArray?Array.isArray(e):"[object Array]"===m(e)}var l=1/0;function d(e){return null==e?"":function(e){if("string"==typeof e)return e;var t=e+"";return"0"==t&&1/e==-l?"-0":t}(e)}function f(e){return"string"==typeof e}function v(e){return"number"==typeof e}function g(e){return!0===e||!1===e||function(e){return function(e){return"object"===n(e)}(e)&&null!==e}(e)&&"[object Boolean]"==m(e)}function y(e){return null!=e}function p(e){return!e.trim().length}function m(e){return null==e?void 0===e?"[object Undefined]":"[object Null]":Object.prototype.toString.call(e)}var b=function(e){return"Missing ".concat(e," property in key")},k=function(e){return"Property 'weight' in key '".concat(e,"' must be a positive integer")},M=Object.prototype.hasOwnProperty,w=function(){function e(t){var n=this;r(this,e),this._keys=[],this._keyMap={};var i=0;t.forEach((function(e){var t=x(e);n._keys.push(t),n._keyMap[t.id]=t,i+=t.weight})),this._keys.forEach((function(e){e.weight/=i}))}return o(e,[{key:"get",value:function(e){return this._keyMap[e]}},{key:"keys",value:function(){return this._keys}},{key:"toJSON",value:function(){return JSON.stringify(this._keys)}}]),e}();function x(e){var t=null,n=null,r=null,i=1,o=null;if(f(e)||u(e))r=e,t=L(e),n=S(e);else{if(!M.call(e,"name"))throw new Error(b("name"));var a=e.name;if(r=a,M.call(e,"weight")&&(i=e.weight)<=0)throw new Error(k(a));t=L(a),n=S(a),o=e.getFn}return{path:t,id:n,weight:i,src:r,getFn:o}}function L(e){return u(e)?e:e.split(".")}function S(e){return u(e)?e.join("."):e}var _={useExtendedSearch:!1,getFn:function(e,t){var n=[],r=!1;return function e(t,i,o){if(y(t))if(i[o]){var a=t[i[o]];if(!y(a))return;if(o===i.length-1&&(f(a)||v(a)||g(a)))n.push(d(a));else if(u(a)){r=!0;for(var c=0,s=a.length;c<s;c+=1)e(a[c],i,o+1)}else i.length&&e(a,i,o+1)}else n.push(t)}(e,f(t)?t.split("."):t,0),r?n:n[0]},ignoreLocation:!1,ignoreFieldNorm:!1,fieldNormWeight:1},O=t(t(t(t({},{isCaseSensitive:!1,includeScore:!1,keys:[],shouldSort:!0,sortFn:function(e,t){return e.score===t.score?e.idx<t.idx?-1:1:e.score<t.score?-1:1}}),{includeMatches:!1,findAllMatches:!1,minMatchCharLength:1}),{location:0,threshold:.6,distance:100}),_),j=/[^ ]+/g,A=function(){function e(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},n=t.getFn,i=void 0===n?O.getFn:n,o=t.fieldNormWeight,a=void 0===o?O.fieldNormWeight:o;r(this,e),this.norm=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:1,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:3,n=new Map,r=Math.pow(10,t);return{get:function(t){var i=t.match(j).length;if(n.has(i))return n.get(i);var o=1/Math.pow(i,.5*e),a=parseFloat(Math.round(o*r)/r);return n.set(i,a),a},clear:function(){n.clear()}}}(a,3),this.getFn=i,this.isCreated=!1,this.setIndexRecords()}return o(e,[{key:"setSources",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[];this.docs=e}},{key:"setIndexRecords",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[];this.records=e}},{key:"setKeys",value:function(){var e=this,t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[];this.keys=t,this._keysMap={},t.forEach((function(t,n){e._keysMap[t.id]=n}))}},{key:"create",value:function(){var e=this;!this.isCreated&&this.docs.length&&(this.isCreated=!0,f(this.docs[0])?this.docs.forEach((function(t,n){e._addString(t,n)})):this.docs.forEach((function(t,n){e._addObject(t,n)})),this.norm.clear())}},{key:"add",value:function(e){var t=this.size();f(e)?this._addString(e,t):this._addObject(e,t)}},{key:"removeAt",value:function(e){this.records.splice(e,1);for(var t=e,n=this.size();t<n;t+=1)this.records[t].i-=1}},{key:"getValueForItemAtKeyId",value:function(e,t){return e[this._keysMap[t]]}},{key:"size",value:function(){return this.records.length}},{key:"_addString",value:function(e,t){if(y(e)&&!p(e)){var n={v:e,i:t,n:this.norm.get(e)};this.records.push(n)}}},{key:"_addObject",value:function(e,t){var n=this,r={i:t,$:{}};this.keys.forEach((function(t,i){var o=t.getFn?t.getFn(e):n.getFn(e,t.path);if(y(o))if(u(o)){for(var a=[],c=[{nestedArrIndex:-1,value:o}];c.length;){var s=c.pop(),h=s.nestedArrIndex,l=s.value;if(y(l))if(f(l)&&!p(l)){var d={v:l,i:h,n:n.norm.get(l)};a.push(d)}else u(l)&&l.forEach((function(e,t){c.push({nestedArrIndex:t,value:e})}))}r.$[i]=a}else if(f(o)&&!p(o)){var v={v:o,n:n.norm.get(o)};r.$[i]=v}})),this.records.push(r)}},{key:"toJSON",value:function(){return{keys:this.keys,records:this.records}}}]),e}();function E(e,t){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},r=n.getFn,i=void 0===r?O.getFn:r,o=n.fieldNormWeight,a=void 0===o?O.fieldNormWeight:o,c=new A({getFn:i,fieldNormWeight:a});return c.setKeys(e.map(x)),c.setSources(t),c.create(),c}function I(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=t.errors,r=void 0===n?0:n,i=t.currentLocation,o=void 0===i?0:i,a=t.expectedLocation,c=void 0===a?0:a,s=t.distance,h=void 0===s?O.distance:s,u=t.ignoreLocation,l=void 0===u?O.ignoreLocation:u,d=r/e.length;if(l)return d;var f=Math.abs(c-o);return h?d+f/h:f?1:d}var F=32;function C(e,t,n){var r=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{},i=r.location,o=void 0===i?O.location:i,a=r.distance,c=void 0===a?O.distance:a,s=r.threshold,h=void 0===s?O.threshold:s,u=r.findAllMatches,l=void 0===u?O.findAllMatches:u,d=r.minMatchCharLength,f=void 0===d?O.minMatchCharLength:d,v=r.includeMatches,g=void 0===v?O.includeMatches:v,y=r.ignoreLocation,p=void 0===y?O.ignoreLocation:y;if(t.length>F)throw new Error("Pattern length exceeds max of ".concat(F,"."));for(var m,b=t.length,k=e.length,M=Math.max(0,Math.min(o,k)),w=h,x=M,L=f>1||g,S=L?Array(k):[];(m=e.indexOf(t,x))>-1;){var _=I(t,{currentLocation:m,expectedLocation:M,distance:c,ignoreLocation:p});if(w=Math.min(_,w),x=m+b,L)for(var j=0;j<b;)S[m+j]=1,j+=1}x=-1;for(var A=[],E=1,C=b+k,N=1<<b-1,P=0;P<b;P+=1){for(var W=0,T=C;W<T;)I(t,{errors:P,currentLocation:M+T,expectedLocation:M,distance:c,ignoreLocation:p})<=w?W=T:C=T,T=Math.floor((C-W)/2+W);C=T;var $=Math.max(1,M-T+1),D=l?k:Math.min(M+T,k)+b,K=Array(D+2);K[D+1]=(1<<P)-1;for(var z=D;z>=$;z-=1){var J=z-1,R=n[e.charAt(J)];if(L&&(S[J]=+!!R),K[z]=(K[z+1]<<1|1)&R,P&&(K[z]|=(A[z+1]|A[z])<<1|1|A[z+1]),K[z]&N&&(E=I(t,{errors:P,currentLocation:J,expectedLocation:M,distance:c,ignoreLocation:p}))<=w){if(w=E,(x=J)<=M)break;$=Math.max(1,2*M-x)}}if(I(t,{errors:P+1,currentLocation:M,expectedLocation:M,distance:c,ignoreLocation:p})>w)break;A=K}var U={isMatch:x>=0,score:Math.max(.001,E)};if(L){var B=function(){for(var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[],t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:O.minMatchCharLength,n=[],r=-1,i=-1,o=0,a=e.length;o<a;o+=1){var c=e[o];c&&-1===r?r=o:c||-1===r||((i=o-1)-r+1>=t&&n.push([r,i]),r=-1)}return e[o-1]&&o-r>=t&&n.push([r,o-1]),n}(S,f);B.length?g&&(U.indices=B):U.isMatch=!1}return U}function N(e){for(var t={},n=0,r=e.length;n<r;n+=1){var i=e.charAt(n);t[i]=(t[i]||0)|1<<r-n-1}return t}var P=function(){function e(t){var n=this,i=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},o=i.location,a=void 0===o?O.location:o,c=i.threshold,s=void 0===c?O.threshold:c,h=i.distance,u=void 0===h?O.distance:h,l=i.includeMatches,d=void 0===l?O.includeMatches:l,f=i.findAllMatches,v=void 0===f?O.findAllMatches:f,g=i.minMatchCharLength,y=void 0===g?O.minMatchCharLength:g,p=i.isCaseSensitive,m=void 0===p?O.isCaseSensitive:p,b=i.ignoreLocation,k=void 0===b?O.ignoreLocation:b;if(r(this,e),this.options={location:a,threshold:s,distance:u,includeMatches:d,findAllMatches:v,minMatchCharLength:y,isCaseSensitive:m,ignoreLocation:k},this.pattern=m?t:t.toLowerCase(),this.chunks=[],this.pattern.length){var M=function(e,t){n.chunks.push({pattern:e,alphabet:N(e),startIndex:t})},w=this.pattern.length;if(w>F){for(var x=0,L=w%F,S=w-L;x<S;)M(this.pattern.substr(x,F),x),x+=F;if(L){var _=w-F;M(this.pattern.substr(_),_)}}else M(this.pattern,0)}}return o(e,[{key:"searchIn",value:function(e){var t=this.options,n=t.isCaseSensitive,r=t.includeMatches;if(n||(e=e.toLowerCase()),this.pattern===e){var i={isMatch:!0,score:0};return r&&(i.indices=[[0,e.length-1]]),i}var o=this.options,a=o.location,s=o.distance,h=o.threshold,u=o.findAllMatches,l=o.minMatchCharLength,d=o.ignoreLocation,f=[],v=0,g=!1;this.chunks.forEach((function(t){var n=t.pattern,i=t.alphabet,o=t.startIndex,y=C(e,n,i,{location:a+o,distance:s,threshold:h,findAllMatches:u,minMatchCharLength:l,includeMatches:r,ignoreLocation:d}),p=y.isMatch,m=y.score,b=y.indices;p&&(g=!0),v+=m,p&&b&&(f=[].concat(c(f),c(b)))}));var y={isMatch:g,score:g?v/this.chunks.length:1};return g&&r&&(y.indices=f),y}}]),e}(),W=[];function T(e,t){for(var n=0,r=W.length;n<r;n+=1){var i=W[n];if(i.condition(e,t))return new i(e,t)}return new P(e,t)}function $(e,t){var n=e.matches;t.matches=[],y(n)&&n.forEach((function(e){if(y(e.indices)&&e.indices.length){var n={indices:e.indices,value:e.value};e.key&&(n.key=e.key.src),e.idx>-1&&(n.refIndex=e.idx),t.matches.push(n)}}))}function D(e,t){t.score=e.score}var K=function(){function e(n){var i=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},o=arguments.length>2?arguments[2]:void 0;if(r(this,e),this.options=t(t({},O),i),this.options.useExtendedSearch)throw new Error("Extended search is not available");this._keyStore=new w(this.options.keys),this.setCollection(n,o)}return o(e,[{key:"setCollection",value:function(e,t){if(this._docs=e,t&&!(t instanceof A))throw new Error("Incorrect 'index' type");this._myIndex=t||E(this.options.keys,this._docs,{getFn:this.options.getFn,fieldNormWeight:this.options.fieldNormWeight})}},{key:"add",value:function(e){y(e)&&(this._docs.push(e),this._myIndex.add(e))}},{key:"remove",value:function(){for(var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:function(){return!1},t=[],n=0,r=this._docs.length;n<r;n+=1){var i=this._docs[n];e(i,n)&&(this.removeAt(n),n-=1,r-=1,t.push(i))}return t}},{key:"removeAt",value:function(e){this._docs.splice(e,1),this._myIndex.removeAt(e)}},{key:"getIndex",value:function(){return this._myIndex}},{key:"search",value:function(e){var t=(arguments.length>1&&void 0!==arguments[1]?arguments[1]:{}).limit,n=void 0===t?-1:t,r=this.options,i=r.includeMatches,o=r.includeScore,a=r.shouldSort,c=r.sortFn,s=r.ignoreFieldNorm,h=f(e)?f(this._docs[0])?this._searchStringList(e):this._searchObjectList(e):this._searchLogical(e);return function(e,t){var n=t.ignoreFieldNorm,r=void 0===n?O.ignoreFieldNorm:n;e.forEach((function(e){var t=1;e.matches.forEach((function(e){var n=e.key,i=e.norm,o=e.score,a=n?n.weight:null;t*=Math.pow(0===o&&a?Number.EPSILON:o,(a||1)*(r?1:i))})),e.score=t}))}(h,{ignoreFieldNorm:s}),a&&h.sort(c),v(n)&&n>-1&&(h=h.slice(0,n)),function(e,t){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},r=n.includeMatches,i=void 0===r?O.includeMatches:r,o=n.includeScore,a=void 0===o?O.includeScore:o,c=[];return i&&c.push($),a&&c.push(D),e.map((function(e){var n=e.idx,r={item:t[n],refIndex:n};return c.length&&c.forEach((function(t){t(e,r)})),r}))}(h,this._docs,{includeMatches:i,includeScore:o})}},{key:"_searchStringList",value:function(e){var t=T(e,this.options),n=this._myIndex.records,r=[];return n.forEach((function(e){var n=e.v,i=e.i,o=e.n;if(y(n)){var a=t.searchIn(n),c=a.isMatch,s=a.score,h=a.indices;c&&r.push({item:n,idx:i,matches:[{score:s,value:n,norm:o,indices:h}]})}})),r}},{key:"_searchLogical",value:function(e){throw new Error("Logical search is not available")}},{key:"_searchObjectList",value:function(e){var t=this,n=T(e,this.options),r=this._myIndex,i=r.keys,o=r.records,a=[];return o.forEach((function(e){var r=e.$,o=e.i;if(y(r)){var s=[];i.forEach((function(e,i){s.push.apply(s,c(t._findMatches({key:e,value:r[i],searcher:n})))})),s.length&&a.push({idx:o,item:r,matches:s})}})),a}},{key:"_findMatches",value:function(e){var t=e.key,n=e.value,r=e.searcher;if(!y(n))return[];var i=[];if(u(n))n.forEach((function(e){var n=e.v,o=e.i,a=e.n;if(y(n)){var c=r.searchIn(n),s=c.isMatch,h=c.score,u=c.indices;s&&i.push({score:h,key:t,value:n,idx:o,norm:a,indices:u})}}));else{var o=n.v,a=n.n,c=r.searchIn(o),s=c.isMatch,h=c.score,l=c.indices;s&&i.push({score:h,key:t,value:o,norm:a,indices:l})}return i}}]),e}();return K.version="7.0.0",K.createIndex=E,K.parseIndex=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=t.getFn,r=void 0===n?O.getFn:n,i=t.fieldNormWeight,o=void 0===i?O.fieldNormWeight:i,a=e.keys,c=e.records,s=new A({getFn:r,fieldNormWeight:o});return s.setKeys(a),s.setIndexRecords(c),s},K.config=O,K},"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e="undefined"!=typeof globalThis?globalThis:e||self).Fuse=t();
-```
+````
 
 ## File: themes/PaperMod/assets/js/license.js
-```javascript
+````javascript
 /*
   PaperMod v8+
   License: MIT https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE
   Copyright (c) 2020 nanxiaobei and adityatelange
   Copyright (c) 2021-2025 adityatelange
 */
-```
+````
 
 ## File: themes/PaperMod/i18n/ar.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "السابق"
 
@@ -2075,10 +2078,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copy
   translation: "نسخ الكود"
-```
+````
 
 ## File: themes/PaperMod/i18n/be.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Папярэдняя"
 
@@ -2118,10 +2121,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "скапіявана!"
-```
+````
 
 ## File: themes/PaperMod/i18n/bg.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Предишна страница"
 
@@ -2138,10 +2141,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: translations
   translation: "Преводи"
-```
+````
 
 ## File: themes/PaperMod/i18n/bn.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "পূর্ববর্তী"
 
@@ -2175,10 +2178,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "কপি হয়েছে!"
-```
+````
 
 ## File: themes/PaperMod/i18n/ca.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Pàgina anterior"
 
@@ -2198,10 +2201,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: home
   translation: "Inici"
-```
+````
 
 ## File: themes/PaperMod/i18n/ckb.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "پەڕەی پێشتر"
 
@@ -2227,10 +2230,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "لەبەر گیرایەوە!"
-```
+````
 
 ## File: themes/PaperMod/i18n/cs.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Předchozí"
 
@@ -2264,10 +2267,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "zkopírováno!"
-```
+````
 
 ## File: themes/PaperMod/i18n/da.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Forrige Side"
 
@@ -2296,10 +2299,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "kopieret!"
-```
+````
 
 ## File: themes/PaperMod/i18n/de.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Vorherige"
 
@@ -2333,10 +2336,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "Kopiert!"
-```
+````
 
 ## File: themes/PaperMod/i18n/el.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Προηγούμενο"
 
@@ -2370,10 +2373,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "αντιγράφηκε!"
-```
+````
 
 ## File: themes/PaperMod/i18n/en.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Prev"
 
@@ -2407,10 +2410,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "copied!"
-```
+````
 
 ## File: themes/PaperMod/i18n/eo.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "antaŭa paĝo"
 
@@ -2436,10 +2439,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "kopiite!"
-```
+````
 
 ## File: themes/PaperMod/i18n/es.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Anterior"
 
@@ -2473,10 +2476,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "¡copiado!"
-```
+````
 
 ## File: themes/PaperMod/i18n/fa.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "صفحه قبلی"
 
@@ -2505,10 +2508,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "کپی شد!"
-```
+````
 
 ## File: themes/PaperMod/i18n/fi.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Edellinen"
 
@@ -2542,10 +2545,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "Kopioitu!"
-```
+````
 
 ## File: themes/PaperMod/i18n/fr.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Précédent"
 
@@ -2579,10 +2582,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "Copié !"
-```
+````
 
 ## File: themes/PaperMod/i18n/he.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "הקודם"
 
@@ -2616,10 +2619,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "הועתק!"
-```
+````
 
 ## File: themes/PaperMod/i18n/hi.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "पिछला"
 
@@ -2639,10 +2642,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: translations
   translation: "अनुवाद"
-```
+````
 
 ## File: themes/PaperMod/i18n/hr.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Prethodna stranica"
 
@@ -2676,10 +2679,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "kopirano!"
-```
+````
 
 ## File: themes/PaperMod/i18n/hu.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Előző oldal"
 
@@ -2696,10 +2699,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: translations
   translation: "Fordítások"
-```
+````
 
 ## File: themes/PaperMod/i18n/id.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Sebelumnya"
 
@@ -2733,10 +2736,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "disalin!"
-```
+````
 
 ## File: themes/PaperMod/i18n/it.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Precedente"
 
@@ -2770,10 +2773,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "copiato!"
-```
+````
 
 ## File: themes/PaperMod/i18n/ja.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "前へ"
 
@@ -2807,10 +2810,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "コピーされました!"
-```
+````
 
 ## File: themes/PaperMod/i18n/ko.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "이전 페이지"
 
@@ -2844,10 +2847,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "복사 완료!"
-```
+````
 
 ## File: themes/PaperMod/i18n/ku.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Rûpela Paş"
 
@@ -2873,10 +2876,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "Hat jêgirtin!"
-```
+````
 
 ## File: themes/PaperMod/i18n/mn.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Ѳмнѳх"
 
@@ -2902,10 +2905,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "хуулсан!"
-```
+````
 
 ## File: themes/PaperMod/i18n/ms.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Halaman Sebelumnya"
 
@@ -2934,10 +2937,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "Disalin!"
-```
+````
 
 ## File: themes/PaperMod/i18n/nl.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Vorige"
 
@@ -2971,10 +2974,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "gekopieerd!"
-```
+````
 
 ## File: themes/PaperMod/i18n/no.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Forrige Side"
 
@@ -3008,10 +3011,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "Kopiert!"
-```
+````
 
 ## File: themes/PaperMod/i18n/oc.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Prec."
 
@@ -3045,10 +3048,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "copiat !"
-```
+````
 
 ## File: themes/PaperMod/i18n/pa.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "ਪਿਛਲਾ"
 
@@ -3082,10 +3085,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "ਕਾਪੀ ਕੀਤੀ ਗਈ!!"
-```
+````
 
 ## File: themes/PaperMod/i18n/pl.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Poprzednia"
 
@@ -3119,10 +3122,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "Skopiowano!"
-```
+````
 
 ## File: themes/PaperMod/i18n/pnb.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "پِچھلا"
 
@@ -3156,10 +3159,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "کاپی کیتی گئی!"
-```
+````
 
 ## File: themes/PaperMod/i18n/pt.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Página Anterior"
 
@@ -3193,10 +3196,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "copiado!"
-```
+````
 
 ## File: themes/PaperMod/i18n/ro.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Înapoi"
 
@@ -3230,10 +3233,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "copiat!"
-```
+````
 
 ## File: themes/PaperMod/i18n/ru.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Предыдущая"
 
@@ -3273,10 +3276,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "скопировано!"
-```
+````
 
 ## File: themes/PaperMod/i18n/sk.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Predch"
 
@@ -3310,10 +3313,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "skopírované!"
-```
+````
 
 ## File: themes/PaperMod/i18n/sv.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Förra Sidan"
 
@@ -3342,10 +3345,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "kopierad!"
-```
+````
 
 ## File: themes/PaperMod/i18n/sw.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Uliopita"
 
@@ -3379,10 +3382,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "nakiliwa!"
-```
+````
 
 ## File: themes/PaperMod/i18n/th.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "ก่อนหน้า"
 
@@ -3416,10 +3419,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "คัดลอกแล้ว!"
-```
+````
 
 ## File: themes/PaperMod/i18n/tr.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Önceki"
 
@@ -3453,10 +3456,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "Kopyalandı!"
-```
+````
 
 ## File: themes/PaperMod/i18n/uk.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Попередня"
 
@@ -3482,10 +3485,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "скопійовано!"
-```
+````
 
 ## File: themes/PaperMod/i18n/uz.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Oldingi sahifa"
 
@@ -3505,10 +3508,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: home
   translation: "Bosh sahifa"
-```
+````
 
 ## File: themes/PaperMod/i18n/vi.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "Trang trước"
 
@@ -3542,10 +3545,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "Đã sao chép!"
-```
+````
 
 ## File: themes/PaperMod/i18n/zh-tw.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "上一頁"
 
@@ -3579,10 +3582,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "已複製！"
-```
+````
 
 ## File: themes/PaperMod/i18n/zh.yaml
-```yaml
+````yaml
 - id: prev_page
   translation: "上一页"
 
@@ -3616,10 +3619,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 
 - id: code_copied
   translation: "已复制！"
-```
+````
 
 ## File: themes/PaperMod/layouts/_default/_markup/render-image.html
-```html
+````html
 {{- $u := urls.Parse .Destination -}}
 {{- $src := $u.String -}}
 {{- if not $u.IsAbs -}}
@@ -3642,10 +3645,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     {{- end -}}
   {{- end -}}>
 {{- /**/ -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/_default/archives.html
-```html
+````html
 {{- define "main" }}
 
 <header class="page-header">
@@ -3729,10 +3732,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 {{- end }}
 
 {{- end }}{{/* end main */}}
-```
+````
 
 ## File: themes/PaperMod/layouts/_default/baseof.html
-```html
+````html
 {{- if lt hugo.Version "0.146.0" }}
 {{- errorf "=> hugo v0.146.0 or greater is required for hugo-PaperMod to build " }}
 {{- end -}}
@@ -3760,10 +3763,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 </body>
 
 </html>
-```
+````
 
 ## File: themes/PaperMod/layouts/_default/index.json
-```json
+````json
 {{- $.Scratch.Add "index" slice -}}
 {{- range site.RegularPages -}}
     {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
@@ -3771,10 +3774,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     {{- end }}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/_default/list.html
-```html
+````html
 {{- define "main" }}
 
 {{- if (and site.Params.profileMode.enabled .IsHome) }}
@@ -3896,10 +3899,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 {{- end }}{{/* end profileMode */}}
 
 {{- end }}{{- /* end main */ -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/_default/rss.xml
-```xml
+````xml
 {{- /* Deprecate site.Author.email in favor of site.Params.author.email */}}
 {{- $authorEmail := "" }}
 {{- with site.Params.author }}
@@ -3983,10 +3986,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     {{- end }}
   </channel>
 </rss>
-```
+````
 
 ## File: themes/PaperMod/layouts/_default/search.html
-```html
+````html
 {{- define "main" }}
 
 <header class="page-header">
@@ -4016,10 +4019,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 </div>
 
 {{- end }}{{/* end main */}}
-```
+````
 
 ## File: themes/PaperMod/layouts/_default/single.html
-```html
+````html
 {{- define "main" }}
 
 <article class="post-single">
@@ -4085,10 +4088,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 </article>
 
 {{- end }}{{/* end main */}}
-```
+````
 
 ## File: themes/PaperMod/layouts/_default/terms.html
-```html
+````html
 {{- define "main" }}
 
 {{- if .Title }}
@@ -4116,10 +4119,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 </ul>
 
 {{- end }}{{/* end main */ -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/templates/_funcs/get-page-images.html
-```html
+````html
 {{- $imgs := slice }}
 {{- $imgParams := .Params.images }}
 {{- $resources := .Resources.ByType "image" -}}
@@ -4167,10 +4170,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
   {{- end }}
 {{- end }}
 {{- return $imgs }}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/templates/opengraph.html
-```html
+````html
 <meta property="og:url" content="{{ .Permalink }}">
 
 {{- with or site.Title site.Params.title | plainify }}
@@ -4257,10 +4260,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 {{- with (.Param "social.fediverse_creator") }}
   <meta name="fediverse:creator" content="{{ . }}">
 {{- end }}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/templates/schema_json.html
-```html
+````html
 {{ if .IsHome }}
 <script type="application/ld+json">
 {
@@ -4389,10 +4392,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 {{- end }}{{/* .IsPage end */}}
 
 {{- end -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/templates/twitter_cards.html
-```html
+````html
 {{- if .Params.cover.image -}}
 <meta name="twitter:card" content="summary_large_image">
 {{- if (ne $.Params.cover.relative true) }}
@@ -4424,16 +4427,16 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     {{- end }}
   {{- end }}
 {{- end }}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/anchored_headings.html
-```html
+````html
 {{- /* formats .Content headings by adding an anchor */ -}}
 {{ . | replaceRE "(<h[1-6] id=\"([^\"]+)\".+)(</h[1-6]+>)" "${1}<a hidden class=\"anchor\" aria-hidden=\"true\" href=\"#${2}\">#</a>${3}" | safeHTML }}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/author.html
-```html
+````html
 {{- if or .Params.author site.Params.author }}
 {{- $author := (.Params.author | default site.Params.author) }}
 {{- $author_type := (printf "%T" $author) }}
@@ -4443,10 +4446,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 {{- $author }}
 {{- end }}
 {{- end -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/breadcrumbs.html
-```html
+````html
 {{- if (.Param "ShowBreadCrumbs") -}}
 <div class="breadcrumbs">
     {{- $url := replace .Parent.Permalink (printf "%s" site.Home.Permalink) "" }}
@@ -4466,17 +4469,17 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     {{- end -}}
 </div>
 {{- end -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/comments.html
-```html
+````html
 {{- /* Comments area start */ -}}
 {{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
 {{- /* Comments area end */ -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/cover.html
-```html
+````html
 {{- with .cxt}} {{/* Apply proper context from dict */}}
 {{- if (and .Params.cover.image (not $.isHidden)) }}
 <figure class="entry-cover">
@@ -4542,10 +4545,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 </figure>
 {{- end }}{{/* End image */}}
 {{- end -}}{{/* End context */ -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/edit_post.html
-```html
+````html
 {{- if and (or .Params.editPost.URL site.Params.editPost.URL) (not (.Param "editPost.disabled")) -}}
 {{- $fileUrlPath := path.Join .File.Path }}
 
@@ -4554,25 +4557,25 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     {{- .Params.editPost.Text | default (site.Params.editPost.Text | default (i18n "edit_post" | default "Edit")) -}}
 </a>
 {{- end }}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/extend_footer.html
-```html
+````html
 {{- /* Footer custom content area start */ -}}
 {{- /*     Insert any custom code web-analytics, resources, etc. here */ -}}
 {{- /* Footer custom content area end */ -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/extend_head.html
-```html
+````html
 {{- /* Head custom content area start */ -}}
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- /* Head custom content area end */ -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/footer.html
-```html
+````html
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
     {{- if not site.Params.footer.hideCopyright }}
@@ -4717,10 +4720,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     });
 </script>
 {{- end }}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/head.html
-```html
+````html
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -4878,10 +4881,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 {{- partial "templates/twitter_cards.html" . }}
 {{- partial "templates/schema_json.html" . }}
 {{- end -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/header.html
-```html
+````html
 {{- /* theme-toggle is enabled */}}
 {{- if (not site.Params.disableThemeToggle) }}
 {{- /* theme is light */}}
@@ -5031,10 +5034,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
         </ul>
     </nav>
 </header>
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/home_info.html
-```html
+````html
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
     <header class="entry-header">
@@ -5048,10 +5051,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     </footer>
 </article>
 {{- end -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/index_profile.html
-```html
+````html
 <div class="profile">
     {{- with site.Params.profileMode }}
     <div class="profile_inner">
@@ -5110,10 +5113,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     </div>
     {{- end}}
 </div>
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/post_canonical.html
-```html
+````html
 {{ if and (.Params.canonicalURL) (.Params.ShowCanonicalLink ) -}}
 {{ $url := urls.Parse .Params.canonicalURL }}
 
@@ -5123,10 +5126,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     &nbsp;<a href="{{ trim .Params.canonicalURL " " }}" title="{{ trim .Params.canonicalURL " " }}" target="_blank" rel="noopener noreferrer">{{ $url.Host }}</a>
 </span>
 {{- end }}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/post_meta.html
-```html
+````html
 {{- $scratch := newScratch }}
 
 {{- if not .Date.IsZero -}}
@@ -5150,10 +5153,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
 {{- with ($scratch.Get "meta") }}
 {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
 {{- end -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/post_nav_links.html
-```html
+````html
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- if and (gt (len $pages) 1) (in $pages . ) }}
 <nav class="paginav">
@@ -5173,10 +5176,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
   {{- end }}
 </nav>
 {{- end }}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/share_icons.html
-```html
+````html
 {{- $pageurl := .Permalink }}
 {{- $title := .Title }}
 
@@ -5272,10 +5275,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     </li>
     {{- end }}
 </ul>
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/social_icons.html
-```html
+````html
 <div class="social-icons" {{ with .align}}align="{{.}}" {{- end }}>
     {{- range site.Params.socialIcons }}
     <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
@@ -5284,10 +5287,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     </a>
     {{- end }}
 </div>
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/svg.html
-```html
+````html
 {{- $icon_name := ( trim .name " " | lower )}}
 {{- if (eq $icon_name "123rf") -}}
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -6276,10 +6279,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
 </svg>
 {{- end -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/toc.html
-```html
+````html
 {{- $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content -}}
 {{- $has_headers := ge (len $headers) 1 -}}
 {{- if $has_headers -}}
@@ -6377,10 +6380,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     </details>
 </div>
 {{- end }}
-```
+````
 
 ## File: themes/PaperMod/layouts/partials/translation_list.html
-```html
+````html
 {{- if .IsTranslated -}}
 {{- if (ne .Layout "search") }}
 {{- if or .Params.author site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) }}&nbsp;|&nbsp;{{- end -}}
@@ -6400,10 +6403,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     {{- end }}
 </ul>
 {{- end -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/shortcodes/collapse.html
-```html
+````html
 {{ if .Get "summary" }}
 {{ else }}
 {{ warnf "missing value for param 'summary': %s" .Position }}
@@ -6412,10 +6415,10 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
   <summary markdown="span">{{ .Get "summary" | markdownify }}</summary>
   {{ .Inner | markdownify }}
 </details></p>
-```
+````
 
 ## File: themes/PaperMod/layouts/shortcodes/figure.html
-```html
+````html
 <figure{{ if or (.Get "class") (eq (.Get "align") "center") }} class="
            {{- if eq (.Get "align") "center" }}align-center {{ end }}
            {{- with .Get "class" }}{{ . }}{{- end }}"
@@ -6447,19 +6450,19 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
         </figcaption>
     {{- end }}
 </figure>
-```
+````
 
 ## File: themes/PaperMod/layouts/shortcodes/inTextImg.html
-```html
+````html
 {{- $Img := (.Get "url") }}
 {{- $height := (.Get "height") }}
 {{- $alt := (.Get "alt") }}
 
 <img class="in-text" height="{{ $height | default `15` }}" src="{{$Img}}" alt="{{$alt}}">
-```
+````
 
 ## File: themes/PaperMod/layouts/shortcodes/ltr.html
-```html
+````html
 {{ $.Scratch.Set "md" false }}
 
 {{ if .IsNamedParams }}
@@ -6475,16 +6478,16 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     {{ .Inner | markdownify }}
   {{ end }}
 </div>
-```
+````
 
 ## File: themes/PaperMod/layouts/shortcodes/rawhtml.html
-```html
+````html
 <!-- raw html -->
 {{- .Inner -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/shortcodes/rtl.html
-```html
+````html
 {{ $.Scratch.Set "md" false }}
 
 {{ if .IsNamedParams }}
@@ -6500,17 +6503,17 @@ var e,t;e=this,t=function(){"use strict";function e(e,t){var n=Object.keys(e);if
     {{ .Inner | markdownify }}
   {{ end }}
 </div>
-```
+````
 
 ## File: themes/PaperMod/layouts/404.html
-```html
+````html
 {{- define "main" }}
 <div class="not-found">404</div>
 {{- end }}{{/* end main */ -}}
-```
+````
 
 ## File: themes/PaperMod/layouts/robots.txt
-```
+````
 User-agent: *
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 Disallow:
@@ -6518,22 +6521,22 @@ Disallow:
 Disallow: /
 {{- end }}
 Sitemap: {{ "sitemap.xml" | absURL }}
-```
+````
 
 ## File: themes/PaperMod/.git
-```
+````
 gitdir: ../../.git/modules/themes/PaperMod
-```
+````
 
 ## File: themes/PaperMod/go.mod
-```
+````
 module github.com/adityatelange/hugo-PaperMod
 
 go 1.12
-```
+````
 
 ## File: themes/PaperMod/LICENSE
-```
+````
 MIT License
 
 Copyright (c) 2020 nanxiaobei and adityatelange
@@ -6556,10 +6559,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```
+````
 
 ## File: themes/PaperMod/README.md
-```markdown
+````markdown
 <h1 align=center>Hugo PaperMod | <a href="https://adityatelange.github.io/hugo-PaperMod/" rel="nofollow">Demo</a></h1>
 
 <h4 align=center>☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive</h4>
@@ -6666,10 +6669,10 @@ Release ChangeLog has info about stuff added: **[Releases](https://github.com/ad
 ## Stargazers over time 📈
 
 [![Stargazers over time](https://starchart.cc/adityatelange/hugo-PaperMod.svg?background=%23ffffff00&axis=%23858585&line=%236b63ff)](https://starchart.cc/adityatelange/hugo-PaperMod)
-```
+````
 
 ## File: themes/PaperMod/theme.toml
-```toml
+````toml
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
@@ -6722,10 +6725,351 @@ min_version = "0.146.0"
   author = "nanxiaobei"
   homepage = "https://github.com/nanxiaobei"
   repo = "https://github.com/nanxiaobei/hugo-paper/"
+````
+
+## File: archetypes/default.md
+````markdown
++++
+date = '{{ .Date }}'
+draft = true
+title = '{{ replace .File.ContentBaseName "-" " " | title }}'
++++
+````
+
+## File: content/blog/abobrinha/_index.md
+````markdown
+---
+title: "Abobrinha"
+description: "Conteúdos leves, curiosidades e reflexões."
+---
+
+# Abobrinha
+
+Aqui você encontra curiosidades, reflexões e conteúdos diversos.
+````
+
+## File: content/blog/ferramentas-de-estudo/_index.md
+````markdown
+---
+title: "Ferramentas de Estudo"
+description: "Dicas e ferramentas para potencializar seus estudos."
+---
+
+# Ferramentas de Estudo
+
+Descubra ferramentas e métodos para estudar melhor.
+````
+
+## File: content/blog/inteligencia-artificial/_index.md
+````markdown
+---
+title: "Inteligência Artificial"
+description: "Artigos sobre Inteligência Artificial."
+---
+
+# Inteligência Artificial
+
+Aqui você encontra artigos e novidades sobre IA.
+````
+
+## File: content/blog/_index.md
+````markdown
+---
+title: "Blog"
+description: "Navegue pelos artigos do SherlockRamos organizados por categoria."
+---
+
+# Blog
+
+Escolha uma categoria para explorar:
+
+- [Inteligência Artificial](/blog/inteligencia-artificial/)
+- [Ferramentas de Estudo](/blog/ferramentas-de-estudo/)
+- [Abobrinha](/blog/abobrinha/)
+````
+
+## File: content/contato/_index.md
+````markdown
+---
+title: "Contato"
+description: "Entre em contato pelas redes sociais."
+---
+
+# Contato
+
+Entre em contato pelas redes sociais:
+
+- [Twitter](https://twitter.com/GatoMaconhado_)
+- [Instagram](https://instagram.com/prof.gabrielramos)
+- [GitHub](https://github.com/profgabrielramos-ai)
+````
+
+## File: content/posts/my-first-post.md
+````markdown
++++
+title = 'My First Post'
+date = 2024-01-14T07:07:07+01:00
+draft = true
++++
+## Introduction
+
+This is **bold** text, and this is *emphasized* text.
+
+Visit the [Hugo](https://gohugo.io) website!
+````
+
+## File: docs/analise-e-melhorias-ux-ui.md
+````markdown
+# Análise e Melhorias de UX/UI para o Blog SherlockRamos
+
+Este relatório apresenta uma análise abrangente da interface atual do blog SherlockRamos e propõe melhorias específicas para otimizar a experiência do usuário jovem, com base em princípios de design centrado no usuário e melhores práticas da indústria.
+
+## Análise da Interface Atual
+
+### Pontos Fortes Identificados
+
+**Estrutura e Organização**
+- Arquitetura de informação clara com categorização bem definida (Inteligência Artificial, Ferramentas de Estudo, Abobrinha)
+- Navegação principal simplificada e direta
+- Implementação de tema claro/escuro que atende às preferências modernas dos usuários
+- Design responsivo básico implementado
+
+**Aspectos Técnicos Positivos**
+- Estrutura semântica adequada com uso correto de tags HTML
+- Implementação de acessibilidade básica com atributos ARIA
+- Performance otimizada com minificação de CSS e JavaScript
+- SEO estruturado com meta tags apropriadas
+
+### Falhas e Oportunidades de Melhoria
+
+**Experiência do Usuário**
+- Interface excessivamente minimalista pode parecer monótona para usuários jovens
+- Falta de elementos interativos e engajamento visual
+- Ausência de personalização e gamificação
+- Navegação por categorias limitada sem filtros avançados
+- Carência de elementos que incentivem o compartilhamento social
+
+**Interface do Usuário**
+- Paleta de cores conservadora (#131D4F, #EFE4D2) não reflete vibrância esperada pelo público jovem
+- Tipografia padrão sem personalidade visual distintiva
+- Ausência de elementos gráficos modernos (ícones, ilustrações, animações)
+- Layout excessivamente textual com pouco conteúdo visual
+
+## Necessidades dos Usuários e Objetivos de Negócio
+
+### Perfil do Usuário Jovem
+
+**Características Comportamentais**
+- Atenção limitada (8-12 segundos médios)
+- Preferência por conteúdo visual e interativo
+- Expectativa de carregamento rápido (menos de 3 segundos)
+- Uso predominante de dispositivos móveis (70-80% do tráfego)
+- Engajamento através de redes sociais
+
+**Necessidades Específicas**
+- Descoberta fácil de conteúdo relevante
+- Experiência de leitura otimizada para mobile
+- Funcionalidades de compartilhamento integradas
+- Personalização da experiência
+- Feedback visual imediato nas interações
+
+### Alinhamento com Objetivos de Negócio
+
+**Engajamento e Retenção**
+- Aumentar tempo de permanência no site
+- Reduzir taxa de rejeição
+- Incentivar retorno de visitantes
+- Construir comunidade em torno do conteúdo
+
+**Crescimento e Alcance**
+- Facilitar compartilhamento nas redes sociais
+- Melhorar posicionamento em mecanismos de busca
+- Expandir base de leitores jovens
+- Estabelecer autoridade no nicho de tecnologia e educação
+
+## Propostas de Melhorias UX/UI
+
+### Navegação e Layout
+
+**Sistema de Navegação Aprimorado**
+- Implementação de mega menu com prévia do conteúdo
+- Breadcrumbs visuais com ícones representativos
+- Barra de pesquisa com sugestões automáticas e filtros
+- Menu hambúrguer otimizado para mobile com animações suaves
+
+**Layout Modular e Dinâmico**
+- Grid cards responsivo para apresentação de posts
+- Sidebar com widgets interativos (posts populares, tags trending)
+- Hero section com rotação de conteúdo em destaque
+- Footer expandido com mapa do site visual
+
+**Arquitetura de Informação Melhorada**
+```
+Homepage
+├── Hero Section (conteúdo destacado)
+├── Posts em Destaque (grid responsivo)
+├── Categorias Visuais (cards com ícones)
+├── Newsletter/CTA
+└── Footer Expandido
+
+Post Individual
+├── Header com breadcrumbs
+├── Conteúdo principal (tipografia otimizada)
+├── Sidebar relacionados
+├── Área de comentários/engajamento
+└── CTA próximo post
 ```
 
+### Acessibilidade e Responsividade
+
+**Melhorias de Acessibilidade**
+- Implementação de skip links para navegação por teclado
+- Contraste de cores conforme WCAG 2.1 AA (mínimo 4.5:1)
+- Alt text descritivo para todas as imagens
+- Navegação por landmarks semânticos
+- Suporte completo para leitores de tela
+
+**Responsividade Avançada**
+- Breakpoints otimizados: 320px, 768px, 1024px, 1440px
+- Imagens responsivas com lazy loading
+- Menu touch-friendly com alvos de pelo menos 44px
+- Tipografia fluida usando clamp() para melhor legibilidade
+- Orientação portrait/landscape específica para tablets
+
+### Design Visual e Identidade
+
+**Nova Paleta de Cores**
+```css
+:root {
+  --primary: #6C63FF;      /* Roxo vibrante */
+  --secondary: #FF6B6B;    /* Coral energético */
+  --accent: #4ECDC4;       /* Turquesa moderno */
+  --neutral-dark: #2D3748; /* Cinza escuro */
+  --neutral-light: #F7FAFC; /* Branco suave */
+  --success: #48BB78;      /* Verde confirmação */
+  --warning: #ED8936;      /* Laranja atenção */
+}
+```
+
+**Sistema Tipográfico Hierárquico**
+- Fonte principal: Inter (moderna e legível)
+- Fonte secundária: Fira Code (para código)
+- Escala tipográfica harmônica (1.25 - Perfect Fourth)
+- Line-height otimizado: 1.6 para texto corrido, 1.2 para títulos
+
+**Elementos Gráficos e Iconografia**
+- Conjunto de ícones personalizado no estilo outlined
+- Ilustrações isométricas para categorias
+- Micro-interações com CSS animations
+- Gradientes sutis para elementos de destaque
+
+## Justificativas e Referências
+
+### Princípios de Design Aplicados
+
+**Lei de Fitts**
+Aumentar o tamanho dos alvos de clique (botões, links) para 44px+ melhora significativamente a usabilidade móvel, especialmente para usuários jovens que navegam rapidamente.
+
+**Gestalt - Proximidade e Agrupamento**
+O agrupamento visual de elementos relacionados através de whitespace adequado e cards delimitados melhora a escaneabilidade do conteúdo.
+
+**Lei de Miller**
+Limitação das opções de menu principal a 7±2 itens para reduzir carga cognitiva e facilitar tomada de decisão.
+
+### Cases de Sucesso
+
+**Medium.com**
+- Interface limpa com foco no conteúdo
+- Sistema de recomendação baseado em interesses
+- Micro-interações que incentivam engajamento
+
+**Notion.so**
+- Design modular e flexível
+- Paleta de cores vibrante mas profissional
+- Excelente experiência móvel
+
+**Discord**
+- UI otimizada para usuários jovens
+- Dark mode como padrão
+- Elementos gamificados de engajamento
+
+### Melhores Práticas da Indústria
+
+**Performance Web**
+- Core Web Vitals otimizados (LCP < 2.5s, FID < 100ms, CLS < 0.1)
+- Implementação de Service Workers para cache offline
+- Critical CSS inline para above-the-fold content
+
+**Experiência Móvel**
+- Mobile-first design approach
+- Touch gestures intuitivos (swipe, pinch-to-zoom)
+- Orientação automática de conteúdo
+
+## Ferramentas e Metodologias Recomendadas
+
+### Fase de Pesquisa e Planejamento
+
+**Pesquisa de Usuários**
+- **Hotjar** para análise de heatmaps e gravações de sessão
+- **Google Analytics 4** para comportamento de usuário
+- **Typeform** para surveys de satisfação e feedback
+
+**Design System e Prototipagem**
+- **Figma** para design colaborativo e sistema de componentes
+- **Principle** ou **Framer** para prototipagem de micro-interações
+- **Zeroheight** para documentação do design system
+
+### Implementação e Desenvolvimento
+
+**Framework e Ferramentas**
+- **Hugo** (manter atual) com tema customizado
+- **Tailwind CSS** para sistema de design consistente
+- **Alpine.js** para interatividade leve
+- **Intersection Observer API** para lazy loading e animações
+
+**Performance e Monitoramento**
+- **Lighthouse CI** para auditoria contínua de performance
+- **WebPageTest** para análise detalhada de carregamento
+- **Sentry** para monitoramento de erros em produção
+
+### Metodologia de Implementação
+
+**Processo Iterativo**
+1. **Semana 1-2**: Pesquisa de usuários e análise de dados
+2. **Semana 3-4**: Wireframes e arquitetura de informação
+3. **Semana 5-6**: Design visual e sistema de componentes
+4. **Semana 7-8**: Prototipagem interativa e testes de usabilidade
+5. **Semana 9-12**: Desenvolvimento e implementação
+6. **Semana 13-14**: Testes A/B e otimizações
+
+**Métricas de Sucesso**
+- Redução de 30% na taxa de rejeição
+- Aumento de 40% no tempo médio de sessão
+- Melhoria de 25% na taxa de conversão para newsletter
+- Score de acessibilidade 90+ no Lighthouse
+- Core Web Vitals em verde para 95% das páginas
+
+## Conclusão
+
+A reformulação proposta para o blog SherlockRamos visa criar uma experiência moderna, acessível e envolvente para o público jovem, mantendo a qualidade do conteúdo educacional. As melhorias sugeridas são baseadas em dados, princípios de design estabelecidos e melhores práticas da indústria, garantindo que o site não apenas atenda às expectativas dos usuários atuais, mas também seja escalável para futuras necessidades de crescimento.
+
+A implementação gradual dessas melhorias, combinada com monitoramento contínuo de métricas de usuário, assegurará que o blog se posicione como uma referência moderna no nicho de tecnologia e educação para jovens.
+````
+
+## File: .gitignore
+````
+public/
+````
+
+## File: .gitmodules
+````
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+````
+
 ## File: .github/workflows/hugo.yaml
-```yaml
+````yaml
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
 name: Deploy Hugo site to Pages
 
@@ -6733,7 +7077,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches:
-      - main
+      - master
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -6787,8 +7131,7 @@ jobs:
           path: |
             ${{ runner.temp }}/hugo_cache
           key: hugo-${{ github.run_id }}
-          restore-keys:
-            hugo-
+          restore-keys: hugo-
       - name: Configure Git
         run: git config core.quotepath false
       - name: Build with Hugo
@@ -6821,1373 +7164,346 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-```
+````
 
-## File: archetypes/default.md
-```markdown
+## File: assets/css/custom.css
+````css
+:root {
+  --primary: #131D4F;
+  --secondary: #EFE4D2;
+  --accent1: #254D70;
+  --accent2: #954C2E;
+  --font-family: 'Inter', 'Roboto', 'Montserrat', sans-serif;
+  --background-dark: #0a1d37;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-dark);
+  background-image: repeating-linear-gradient(45deg,
+    rgba(255, 255, 255, 0.05) 0,
+    rgba(255, 255, 255, 0.05) 2px,
+    transparent 2px,
+    transparent 4px);
+  color: var(--primary);
+}
+
+a,
+.navbar a {
+  color: var(--accent1);
+  transition: color 0.2s;
+}
+
+a:hover,
+.navbar a:hover {
+  color: var(--accent2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary);
+  font-family: var(--font-family);
+}
+
+nav {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+button,
+.button {
+  background: var(--accent1);
+  color: var(--secondary);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover,
+.button:hover {
+  background: var(--accent2);
+}
+
+/* Melhorias de UX/UI */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+````
+
+## File: content/_index.md
+````markdown
+---
+title: "SherlockRamos"
+description: "Bem-vindo ao blog SherlockRamos! Aqui você encontra conteúdos sobre Inteligência Artificial, Ferramentas de Estudo e Abobrinhas."
+---
+````
+
+## File: archetypes/post.md
+````markdown
 +++
-date = '{{ .Date }}'
-draft = true
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-+++
-```
-
-## File: content/posts/my-first-post.md
-```markdown
-+++
-title = 'My First Post'
-date = 2024-01-14T07:07:07+01:00
+date = {{ .Date }}
 draft = true
+summary = 'Resumo do post'
+tags = []
+categories = []
 +++
-## Introduction
+````
 
-This is **bold** text, and this is *emphasized* text.
+## File: README.md
+````markdown
+# SherlockRamos Blog
 
-Visit the [Hugo](https://gohugo.io) website!
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/profgabrielramos-ai/sherlockramosblog?utm_source=oss&utm_medium=github&utm_campaign=profgabrielramos-ai%2Fsherlockramosblog&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+
+Bem-vindo ao repositório do blog SherlockRamos! Este projeto é um blog pessoal construído com o [Hugo](https://gohugo.io/), um gerador de sites estáticos rápido e flexível, utilizando o tema **PaperMod**.
+
+## Tecnologias Utilizadas
+
+*   **Hugo**: Framework para geração de sites estáticos.
+*   **PaperMod**: Tema rápido e responsivo para Hugo.
+*   **Git**: Controle de versão.
+*   **GitHub Pages**: Hospedagem do site.
+
+## Funcionalidades
+
+*   Blog com categorias e tags.
+*   Página inicial personalizável com modo de perfil.
+*   Estilização customizável via CSS.
+*   Integração com ícones de redes sociais.
+*   Suporte a Markdown para criação de conteúdo.
+
+## Primeiros Passos
+
+Para configurar e executar o projeto localmente, siga as instruções abaixo.
+
+### Pré-requisitos
+
+Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+
+*   **Git**: Para clonar o repositório.
+*   **Hugo**: Versão `0.148.1` ou superior. Você pode instalá-lo via Homebrew (macOS) ou seguindo as instruções no [site oficial do Hugo](https://gohugo.io/installation/).
+    ```bash
+    brew install hugo
+    ```
+*   **Node.js e npm**: Necessário para o `dart-sass` (se o tema usar Sass para compilação de CSS).
+    ```bash
+    npm install -g dart-sass
+    ```
+
+### Instalação
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/profgabrielramos-ai/sherlockramosblog.git
+    cd sherlockramosblog
+    ```
+
+2.  **Inicialize e atualize os submódulos do Git:**
+    O tema PaperMod é incluído como um submódulo.
+    ```bash
+    git submodule update --init --recursive
+    ```
+
+### Desenvolvimento Local
+
+Para visualizar o site em seu ambiente de desenvolvimento local:
+
+```bash
+hugo server -D
 ```
 
-## File: public/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css
-```css
-/*
-  PaperMod v8+
-  License: MIT https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE
-  Copyright (c) 2020 nanxiaobei and adityatelange
-  Copyright (c) 2021-2025 adityatelange
-*/
-:root{--gap:24px;--content-gap:20px;--nav-width:1024px;--main-width:720px;--header-height:60px;--footer-height:60px;--radius:8px;--theme:rgb(255, 255, 255);--entry:rgb(255, 255, 255);--primary:rgb(30, 30, 30);--secondary:rgb(108, 108, 108);--tertiary:rgb(214, 214, 214);--content:rgb(31, 31, 31);--code-block-bg:rgb(28, 29, 33);--code-bg:rgb(245, 245, 245);--border:rgb(238, 238, 238)}.dark{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--code-bg)}.dark.list{background:var(--theme)}*,::after,::before{box-sizing:border-box}html{-webkit-tap-highlight-color:transparent;overflow-y:scroll;-webkit-text-size-adjust:100%;text-size-adjust:100%}a,button,body,h1,h2,h3,h4,h5,h6{color:var(--primary)}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;font-size:18px;line-height:1.6;word-break:break-word;background:var(--theme)}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section,table{display:block}h1,h2,h3,h4,h5,h6{line-height:1.2}h1,h2,h3,h4,h5,h6,p{margin-top:0;margin-bottom:0}ul{padding:0}a{text-decoration:none}body,figure,ul{margin:0}table{width:100%;border-collapse:collapse;border-spacing:0;overflow-x:auto;word-break:keep-all}button,input,textarea{padding:0;font:inherit;background:0 0;border:0}input,textarea{outline:0}button,input[type=button],input[type=submit]{cursor:pointer}input:-webkit-autofill,textarea:-webkit-autofill{box-shadow:0 0 0 50px var(--theme)inset}img{display:block;max-width:100%}.not-found{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:center;height:80%;font-size:160px;font-weight:700}.archive-posts{width:100%;font-size:16px}.archive-year{margin-top:40px}.archive-year:not(:last-of-type){border-bottom:2px solid var(--border)}.archive-month{display:flex;align-items:flex-start;padding:10px 0}.archive-month-header{margin:25px 0;width:200px}.archive-month:not(:last-of-type){border-bottom:1px solid var(--border)}.archive-entry{position:relative;padding:5px;margin:10px 0}.archive-entry-title{margin:5px 0;font-weight:400}.archive-count,.archive-meta{color:var(--secondary);font-size:14px}.footer,.top-link{font-size:12px;color:var(--secondary)}.footer{max-width:calc(var(--main-width) + var(--gap) * 2);margin:auto;padding:calc((var(--footer-height) - var(--gap))/2)var(--gap);text-align:center;line-height:24px}.footer span{margin-inline-start:1px;margin-inline-end:1px}.footer span:last-child{white-space:nowrap}.footer a{color:inherit;border-bottom:1px solid var(--secondary)}.footer a:hover{border-bottom:1px solid var(--primary)}.top-link{visibility:hidden;position:fixed;bottom:60px;right:30px;z-index:99;background:var(--tertiary);width:42px;height:42px;padding:12px;border-radius:64px;transition:visibility .5s,opacity .8s linear}.top-link,.top-link svg{filter:drop-shadow(0 0 0 var(--theme))}.footer a:hover,.top-link:hover{color:var(--primary)}.top-link:focus,#theme-toggle:focus{outline:0}.nav{display:flex;flex-wrap:wrap;justify-content:space-between;max-width:calc(var(--nav-width) + var(--gap) * 2);margin-inline-start:auto;margin-inline-end:auto;line-height:var(--header-height)}.nav a{display:block}.logo,#menu{display:flex;margin:auto var(--gap)}.logo{flex-wrap:inherit}.logo a{font-size:24px;font-weight:700}.logo a img,.logo a svg{display:inline;vertical-align:middle;pointer-events:none;transform:translate(0,-10%);border-radius:6px;margin-inline-end:8px}button#theme-toggle{font-size:26px;margin:auto 4px}body.dark #moon{vertical-align:middle;display:none}body:not(.dark) #sun{display:none}#menu{list-style:none;word-break:keep-all;overflow-x:auto;white-space:nowrap}#menu li+li{margin-inline-start:var(--gap)}#menu a{font-size:16px}#menu .active{font-weight:500;border-bottom:2px solid}.lang-switch li,.lang-switch ul,.logo-switches{display:inline-flex;margin:auto 4px}.lang-switch{display:flex;flex-wrap:inherit}.lang-switch a{margin:auto 3px;font-size:16px;font-weight:500}.logo-switches{flex-wrap:inherit}.main{position:relative;min-height:calc(100vh - var(--header-height) - var(--footer-height));max-width:calc(var(--main-width) + var(--gap) * 2);margin:auto;padding:var(--gap)}.page-header h1{font-size:40px}.pagination{display:flex}.pagination a{color:var(--theme);font-size:13px;line-height:36px;background:var(--primary);border-radius:calc(36px/2);padding:0 16px}.pagination .next{margin-inline-start:auto}.social-icons a{display:inline-flex;padding:10px}.social-icons a svg{height:26px;width:26px}code{direction:ltr}div.highlight,pre{position:relative}.copy-code{display:none;position:absolute;top:4px;right:4px;color:rgba(255,255,255,.8);background:rgba(78,78,78,.8);border-radius:var(--radius);padding:0 5px;font-size:14px;user-select:none}div.highlight:hover .copy-code,pre:hover .copy-code{display:block}.first-entry{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:320px;margin:var(--gap)0 calc(var(--gap) * 2)}.first-entry .entry-header{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3}.first-entry .entry-header h1{font-size:34px;line-height:1.3}.first-entry .entry-content{margin:14px 0;font-size:16px;-webkit-line-clamp:3}.first-entry .entry-footer{font-size:14px}.home-info .entry-content{-webkit-line-clamp:unset}.post-entry{position:relative;margin-bottom:var(--gap);padding:var(--gap);background:var(--entry);border-radius:var(--radius);transition:transform .1s;border:1px solid var(--border)}.post-entry:active{transform:scale(.96)}.tag-entry .entry-cover{display:none}.entry-header h2{font-size:24px;line-height:1.3}.entry-content{margin:8px 0;color:var(--secondary);font-size:14px;line-height:1.6;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.entry-footer{color:var(--secondary);font-size:13px}.entry-link{position:absolute;left:0;right:0;top:0;bottom:0}.entry-hint{color:var(--secondary)}.entry-hint-parent{display:flex;justify-content:space-between}.entry-cover{font-size:14px;margin-bottom:var(--gap);text-align:center}.entry-cover img{border-radius:var(--radius);width:100%;height:auto}.entry-cover a{color:var(--secondary);box-shadow:0 1px 0 var(--primary)}.page-header,.post-header{margin:24px auto var(--content-gap)}.post-title{margin-bottom:2px;font-size:40px}.post-description{margin-top:10px;margin-bottom:5px}.post-meta,.breadcrumbs{color:var(--secondary);font-size:14px;display:flex;flex-wrap:wrap;align-items:center}.post-meta .i18n_list li{display:inline-flex;list-style:none;margin:auto 3px;box-shadow:0 1px 0 var(--secondary)}.breadcrumbs a{font-size:16px}.post-content{color:var(--content)}.post-content h3,.post-content h4,.post-content h5,.post-content h6{margin:24px 0 16px}.post-content h1{margin:40px auto 32px;font-size:40px}.post-content h2{margin:32px auto 24px;font-size:32px}.post-content h3{font-size:24px}.post-content h4{font-size:16px}.post-content h5{font-size:14px}.post-content h6{font-size:12px}.post-content a,.toc a:hover{box-shadow:0 1px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.post-content a code{margin:auto 0;border-radius:0;box-shadow:0 -1px 0 var(--primary)inset}.post-content del{text-decoration:line-through}.post-content dl,.post-content ol,.post-content p,.post-content figure,.post-content ul{margin-bottom:var(--content-gap)}.post-content ol,.post-content ul{padding-inline-start:20px}.post-content li{margin-top:5px}.post-content li p{margin-bottom:0}.post-content dl{display:flex;flex-wrap:wrap;margin:0}.post-content dt{width:25%;font-weight:700}.post-content dd{width:75%;margin-inline-start:0;padding-inline-start:10px}.post-content dd~dd,.post-content dt~dt{margin-top:10px}.post-content table{margin-bottom:var(--content-gap)}.post-content table th,.post-content table:not(.highlighttable,.highlight table,.gist .highlight) td{min-width:80px;padding:8px 5px;line-height:1.5;border-bottom:1px solid var(--border)}.post-content table th{text-align:start}.post-content table:not(.highlighttable) td code:only-child{margin:auto 0}.post-content .highlight table{border-radius:var(--radius)}.post-content .highlight:not(table){margin:10px auto;background:var(--code-block-bg) !important;border-radius:var(--radius);direction:ltr}.post-content li>.highlight{margin-inline-end:0}.post-content ul pre{margin-inline-start:calc(var(--gap) * -2)}.post-content .highlight pre{margin:0}.post-content .highlighttable{table-layout:fixed}.post-content .highlighttable td:first-child{width:40px}.post-content .highlighttable td .linenodiv{padding-inline-end:0 !important}.post-content .highlighttable td .highlight,.post-content .highlighttable td .linenodiv pre{margin-bottom:0}.post-content code{margin:auto 4px;padding:4px 6px;font-size:.78em;line-height:1.5;background:var(--code-bg);border-radius:2px}.post-content pre code{display:grid;margin:auto 0;padding:10px;color:#d5d5d6;background:var(--code-block-bg) !important;border-radius:var(--radius);overflow-x:auto;word-break:break-all}.post-content blockquote{margin:20px 0;padding:0 14px;border-inline-start:3px solid var(--primary)}.post-content hr{margin:30px 0;height:2px;background:var(--tertiary);border:0}.post-content iframe{max-width:100%}.post-content img{border-radius:4px;margin:1rem 0}.post-content img[src*="#center"]{margin:1rem auto}.post-content figure.align-center{text-align:center}.post-content figure>figcaption{color:var(--primary);font-size:16px;font-weight:700;margin:8px 0 16px}.post-content figure>figcaption>p{color:var(--secondary);font-size:14px;font-weight:400}.toc{margin:0 2px 40px;border:1px solid var(--border);background:var(--code-bg);border-radius:var(--radius);padding:.4em}.dark .toc{background:var(--entry)}.toc details summary{cursor:zoom-in;margin-inline-start:10px;user-select:none}.toc details[open] summary{cursor:zoom-out}.toc .details{display:inline;font-weight:500}.toc .inner{margin:5px 20px 0;padding:0 10px;opacity:.9}.toc li ul{margin-inline-start:var(--gap)}.toc summary:focus{outline:0}.post-footer{margin-top:56px}.post-footer>*{margin-bottom:10px}.post-tags{display:flex;flex-wrap:wrap;gap:10px}.post-tags li{display:inline-block}.post-tags a,.share-buttons,.paginav{border-radius:var(--radius);background:var(--code-bg);border:1px solid var(--border)}.post-tags a{display:block;padding:0 14px;color:var(--secondary);font-size:14px;line-height:34px;background:var(--code-bg)}.post-tags a:hover,.paginav a:hover{background:var(--border)}.share-buttons{padding:10px;display:flex;justify-content:center;overflow-x:auto;gap:10px}.share-buttons li,.share-buttons a{display:inline-flex}.share-buttons a:not(:last-of-type){margin-inline-end:12px}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover .anchor,h5:hover .anchor,h6:hover .anchor{display:inline-flex;color:var(--secondary);margin-inline-start:8px;font-weight:500;user-select:none}.paginav{display:flex;line-height:30px}.paginav a{padding-inline-start:14px;padding-inline-end:14px;border-radius:var(--radius)}.paginav .title{letter-spacing:1px;text-transform:uppercase;font-size:small;color:var(--secondary)}.paginav .prev,.paginav .next{width:50%}.paginav span:hover:not(.title){box-shadow:0 1px}.paginav .next{margin-inline-start:auto;text-align:right}[dir=rtl] .paginav .next{text-align:left}h1>a>svg{display:inline}img.in-text{display:inline;margin:auto}.buttons,.main .profile{display:flex;justify-content:center}.main .profile{align-items:center;min-height:calc(100vh - var(--header-height) - var(--footer-height) - (var(--gap) * 2));text-align:center}.profile .profile_inner{display:flex;flex-direction:column;align-items:center;gap:10px}.profile img{border-radius:50%}.buttons{flex-wrap:wrap;max-width:400px}.button{background:var(--tertiary);border-radius:var(--radius);margin:8px;padding:6px;transition:transform .1s}.button-inner{padding:0 8px}.button:active{transform:scale(.96)}#searchbox input{padding:4px 10px;width:100%;color:var(--primary);font-weight:700;border:2px solid var(--tertiary);border-radius:var(--radius)}#searchbox input:focus{border-color:var(--secondary)}#searchResults li{list-style:none;border-radius:var(--radius);padding:10px;margin:10px 0;position:relative;font-weight:500}#searchResults{margin:10px 0;width:100%}#searchResults li:active{transition:transform .1s;transform:scale(.98)}#searchResults a{position:absolute;width:100%;height:100%;top:0;left:0;outline:none}#searchResults .focus{transform:scale(.98);border:2px solid var(--tertiary)}.terms-tags li{display:inline-block;margin:10px;font-weight:500}.terms-tags a{display:block;padding:3px 10px;background:var(--tertiary);border-radius:6px;transition:transform .1s}.terms-tags a:active{background:var(--tertiary);transform:scale(.96)}.bg{color:#cad3f5;background-color:#24273a}.chroma{color:#cad3f5;background-color:#24273a}.chroma .x{}.chroma .err{color:#ed8796}.chroma .cl{}.chroma .lnlinks{outline:none;text-decoration:none;color:inherit}.chroma .lntd{vertical-align:top;padding:0;margin:0;border:0}.chroma .lntable{border-spacing:0;padding:0;margin:0;border:0}.chroma .hl{background-color:#474733}.chroma .lnt{white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#8087a2}.chroma .ln{white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#8087a2}.chroma .line{display:flex}.chroma .k{color:#c6a0f6}.chroma .kc{color:#f5a97f}.chroma .kd{color:#ed8796}.chroma .kn{color:#8bd5ca}.chroma .kp{color:#c6a0f6}.chroma .kr{color:#c6a0f6}.chroma .kt{color:#ed8796}.chroma .n{}.chroma .na{color:#8aadf4}.chroma .nb{color:#91d7e3}.chroma .bp{color:#91d7e3}.chroma .nc{color:#eed49f}.chroma .no{color:#eed49f}.chroma .nd{color:#8aadf4;font-weight:700}.chroma .ni{color:#8bd5ca}.chroma .ne{color:#f5a97f}.chroma .nf{color:#8aadf4}.chroma .fm{color:#8aadf4}.chroma .nl{color:#91d7e3}.chroma .nn{color:#f5a97f}.chroma .nx{}.chroma .py{color:#f5a97f}.chroma .nt{color:#c6a0f6}.chroma .nv{color:#f4dbd6}.chroma .vc{color:#f4dbd6}.chroma .vg{color:#f4dbd6}.chroma .vi{color:#f4dbd6}.chroma .vm{color:#f4dbd6}.chroma .l{}.chroma .ld{}.chroma .s{color:#a6da95}.chroma .sa{color:#ed8796}.chroma .sb{color:#a6da95}.chroma .sc{color:#a6da95}.chroma .dl{color:#8aadf4}.chroma .sd{color:#6e738d}.chroma .s2{color:#a6da95}.chroma .se{color:#8aadf4}.chroma .sh{color:#6e738d}.chroma .si{color:#a6da95}.chroma .sx{color:#a6da95}.chroma .sr{color:#8bd5ca}.chroma .s1{color:#a6da95}.chroma .ss{color:#a6da95}.chroma .m{color:#f5a97f}.chroma .mb{color:#f5a97f}.chroma .mf{color:#f5a97f}.chroma .mh{color:#f5a97f}.chroma .mi{color:#f5a97f}.chroma .il{color:#f5a97f}.chroma .mo{color:#f5a97f}.chroma .o{color:#91d7e3;font-weight:700}.chroma .ow{color:#91d7e3;font-weight:700}.chroma .p{}.chroma .c{color:#6e738d;font-style:italic}.chroma .ch{color:#6e738d;font-style:italic}.chroma .cm{color:#6e738d;font-style:italic}.chroma .c1{color:#6e738d;font-style:italic}.chroma .cs{color:#6e738d;font-style:italic}.chroma .cp{color:#6e738d;font-style:italic}.chroma .cpf{color:#6e738d;font-weight:700;font-style:italic}.chroma .g{}.chroma .gd{color:#ed8796;background-color:#363a4f}.chroma .ge{font-style:italic}.chroma .gr{color:#ed8796}.chroma .gh{color:#f5a97f;font-weight:700}.chroma .gi{color:#a6da95;background-color:#363a4f}.chroma .go{}.chroma .gp{}.chroma .gs{font-weight:700}.chroma .gu{color:#f5a97f;font-weight:700}.chroma .gt{color:#ed8796}.chroma .gl{text-decoration:underline}.chroma .w{}.chroma{background-color:unset !important}.chroma .hl{display:flex}.chroma .lnt{padding:0 0 0 12px}.highlight pre.chroma code{padding:8px 0}.highlight pre.chroma .line .cl,.chroma .ln{padding:0 10px}.chroma .lntd:last-of-type{width:100%}::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-track{background:var(--code-bg)}::-webkit-scrollbar-thumb{background:var(--tertiary);border:5px solid var(--theme);border-radius:var(--radius)}.list:not(.dark)::-webkit-scrollbar-thumb{border:5px solid var(--code-bg)}::-webkit-scrollbar-thumb:hover{background:var(--secondary)}::-webkit-scrollbar:not(.highlighttable,.highlight table,.gist .highlight){background:var(--theme)}.post-content .highlighttable td .highlight pre code::-webkit-scrollbar{display:none}.post-content :not(table) ::-webkit-scrollbar-thumb{border:2px solid var(--code-block-bg);background:#717175}.post-content :not(table) ::-webkit-scrollbar-thumb:hover{background:#a3a3a5}.gist table::-webkit-scrollbar-thumb{border:2px solid #fff;background:#adadad}.gist table::-webkit-scrollbar-thumb:hover{background:#707070}.post-content table::-webkit-scrollbar-thumb{border-width:2px}@media screen and (min-width:768px){::-webkit-scrollbar{width:19px;height:11px}}@media screen and (max-width:768px){:root{--gap:14px}.profile img{transform:scale(.85)}.first-entry{min-height:260px}.archive-month{flex-direction:column}.archive-year{margin-top:20px}.footer{padding:calc((var(--footer-height) - var(--gap) - 10px)/2)var(--gap)}}@media screen and (max-width:900px){.list .top-link{transform:translateY(-5rem)}}@media screen and (max-width:340px){.share-buttons{justify-content:unset}}@media(prefers-reduced-motion){.terms-tags a:active,.button:active,.post-entry:active,.top-link,#searchResults .focus,#searchResults li:active{transform:none}}
-```
+O site estará disponível em `http://localhost:1313/`. Quaisquer alterações nos arquivos de conteúdo ou configuração serão automaticamente recarregadas.
 
-## File: public/categories/index.html
-```html
-<!DOCTYPE html>
-<html lang="en" dir="auto">
+## Personalização
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Categories | SherlockRamos</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/categories/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/categories/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+### Cores e Fontes
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
+As principais personalizações de estilo são definidas em `assets/css/custom.css`.
 
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-</head>
-
-<body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+1.  Abra o arquivo `assets/css/custom.css`.
+2.  Edite as variáveis CSS no bloco `:root` para ajustar as cores e a família tipográfica:
+    ```css
+    :root {
+      --primary: #131D4F;   /* Cor principal */
+      --secondary: #EFE4D2; /* Cor secundária/fundo */
+      --accent1: #254D70;   /* Cor de destaque 1 */
+      --accent2: #954C2E;   /* Cor de destaque 2 */
+      --font-family: 'Inter', 'Roboto', 'Montserrat', sans-serif; /* Fontes */
     }
+    ```
+3.  Salve o arquivo.
 
-</script>
+### Botões na Página Inicial
 
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="SherlockRamos (Alt + H)">SherlockRamos</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main">
-<header class="page-header">
-    <h1>Categories</h1>
-</header>
+Os botões exibidos na página inicial (no modo de perfil) são configurados em `config.yaml`, dentro de `params.profileMode.buttons`.
 
-<ul class="terms-tags">
-</ul>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">SherlockRamos</a></span> · 
+Para adicionar ou modificar botões:
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+```yaml
+params:
+  profileMode:
+    buttons:
+      - name: "Twitter"
+        url: "https://x.com/GatoMaconhado_"
+      - name: "GitHub"
+        url: "https://github.com/sherlockramos"
+      - name: "Novo Botão"
+        url: "https://example.com"
 ```
 
-## File: public/categories/index.xml
-```xml
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Categories on SherlockRamos</title>
-    <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on SherlockRamos</description>
-    <generator>Hugo -- 0.147.9</generator>
-    <language>pt-br</language>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+Cada item precisa de um `name` (texto do botão) e um `url` (link ao clicar).
+
+### Ícones Sociais
+
+Os ícones de redes sociais no rodapé são configurados em `config.yaml`, dentro de `params.socialIcons`.
+
+```yaml
+params:
+  socialIcons:
+    - name: "Twitter"
+      url: "https://twitter.com/GatoMaconhado_"
+    - name: "Instagram"
+      url: "https://instagram.com/prof.gabrielramos"
+    - name: "GitHub"
+      url: "https://github.com/profgabrielramos-ai"
 ```
 
-## File: public/page/1/index.html
-```html
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <title>http://localhost:1313/</title>
-    <link rel="canonical" href="http://localhost:1313/">
-    <meta name="robots" content="noindex">
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url=http://localhost:1313/">
-  </head>
-</html>
+### Modo de Perfil
+
+O `profileMode` é ativado em `config.yaml` e permite configurar o título, subtítulo, imagem e botões da página inicial.
+
+```yaml
+params:
+  profileMode:
+    enabled: true
+    title: "SherlockRamos"
+    subtitle: "Bem-vindo ao blog do Sherlock Ramos"
+    imageUrl: "https://pbs.twimg.com/profile_images/1848910652808613888/r81-u5pP_400x400.jpg"
+    imageTitle: "Foto de Sherlock Ramos"
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      # ... seus botões aqui
 ```
 
-## File: public/posts/my-first-post/index.html
-```html
-<!DOCTYPE html>
-<html lang="en" dir="auto">
+## Gerenciamento de Conteúdo
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>My First Post | SherlockRamos</title>
-<meta name="keywords" content="">
-<meta name="description" content="Introduction
-This is bold text, and this is emphasized text.
-Visit the Hugo website!">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/my-first-post/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/my-first-post/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+### Criando Novas Postagens
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
+Para criar uma nova postagem de blog, você pode usar o comando do Hugo com o arquétipo `post`:
 
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="SherlockRamos (Alt + H)">SherlockRamos</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      My First Post
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h1>
-    <div class="post-meta"><span title='2024-01-14 07:07:07 +0100 +0100'>January 14, 2024</span>
-
-</div>
-  </header> 
-  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
-<p>This is <strong>bold</strong> text, and this is <em>emphasized</em> text.</p>
-<p>Visit the <a href="https://gohugo.io">Hugo</a> website!</p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">SherlockRamos</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+```bash
+hugo new content/blog/minha-nova-postagem.md
 ```
 
-## File: public/posts/page/1/index.html
-```html
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <title>http://localhost:1313/posts/</title>
-    <link rel="canonical" href="http://localhost:1313/posts/">
-    <meta name="robots" content="noindex">
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url=http://localhost:1313/posts/">
-  </head>
-</html>
-```
-
-## File: public/posts/index.html
-```html
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Posts | SherlockRamos</title>
-<meta name="keywords" content="">
-<meta name="description" content="Posts - SherlockRamos">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-</head>
-
-<body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="SherlockRamos (Alt + H)">SherlockRamos</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Posts
-  </h1>
-</header>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">My First Post
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction This is bold text, and this is emphasized text.
-Visit the Hugo website!
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-01-14 07:07:07 +0100 +0100'>January 14, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to My First Post" href="http://localhost:1313/posts/my-first-post/"></a>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">SherlockRamos</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
-```
-
-## File: public/posts/index.xml
-```xml
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Posts on SherlockRamos</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on SherlockRamos</description>
-    <generator>Hugo -- 0.147.9</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
-&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
-```
-
-## File: public/tags/index.html
-```html
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Tags | SherlockRamos</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/tags/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-</head>
-
-<body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="SherlockRamos (Alt + H)">SherlockRamos</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main">
-<header class="page-header">
-    <h1>Tags</h1>
-</header>
-
-<ul class="terms-tags">
-</ul>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">SherlockRamos</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
-```
-
-## File: public/tags/index.xml
-```xml
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Tags on SherlockRamos</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on SherlockRamos</description>
-    <generator>Hugo -- 0.147.9</generator>
-    <language>pt-br</language>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
-```
-
-## File: public/404.html
-```html
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>404 Page not found | SherlockRamos</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/404.html">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/404.html">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-</head>
-
-<body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="SherlockRamos (Alt + H)">SherlockRamos</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main">
-<div class="not-found">404</div>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">SherlockRamos</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
-```
-
-## File: public/index.html
-```html
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head>
-	<meta name="generator" content="Hugo 0.147.9"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>SherlockRamos</title>
-
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-</head>
-
-<body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="SherlockRamos (Alt + H)">SherlockRamos</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-
-<article class="first-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">My First Post
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction This is bold text, and this is emphasized text.
-Visit the Hugo website!
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-01-14 07:07:07 +0100 +0100'>January 14, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to My First Post" href="http://localhost:1313/posts/my-first-post/"></a>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">SherlockRamos</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
-```
-
-## File: public/index.xml
-```xml
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>SherlockRamos</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on SherlockRamos</description>
-    <generator>Hugo -- 0.147.9</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
-&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
-```
-
-## File: public/sitemap.xml
-```xml
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
-    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-  </url>
-</urlset>
-```
-
-## File: .gitmodules
-```
-[submodule "themes/PaperMod"]
-	path = themes/PaperMod
-	url = https://github.com/adityatelange/hugo-PaperMod.git
-```
-
-## File: hugo.toml
-```toml
-baseURL = 'https://sherlockramos.blog'
-languageCode = 'pt-br'
-title = 'SherlockRamos'
-theme = ["PaperMod"]
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
-```
+Isso criará um novo arquivo Markdown em `content/blog/minha-nova-postagem.md` com o front matter pré-definido pelo arquétipo `archetypes/post.md`.
+
+### Estrutura de Conteúdo
+
+As postagens são organizadas em `content/blog/`. Cada categoria de blog (ex: `inteligencia-artificial`) deve ter um arquivo `_index.md` dentro de seu diretório para que o Hugo a reconheça como uma seção.
+
+## Implantação (Deployment)
+
+Este projeto está configurado para ser implantado automaticamente no [GitHub Pages](https://pages.github.com/) através de um workflow do GitHub Actions (`.github/workflows/hugo.yaml`).
+
+Qualquer push para o branch `master` acionará o processo de build e deploy. Certifique-se de que as configurações de ambiente do GitHub Pages permitam o deploy do branch `master`.
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues para relatar bugs ou sugerir melhorias, e enviar Pull Requests com suas contribuições.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+````
+
+## File: config.yaml
+````yaml
+baseURL: "https://profgabrielramos-ai.github.io/"
+languageCode: "pt-br"
+title: "SherlockRamos"
+theme: "PaperMod"
+defaultContentLanguage: "pt"
+pagination:
+  pagerSize: 10
+
+caches:
+  images:
+    dir: ":cacheDir/images"
+
+params:
+  profileMode:
+    enabled: true
+    title: "SherlockRamos" # default will be site title
+    subtitle: "Bem-vindo ao blog do Sherlock Ramos"
+    imageUrl: "https://pbs.twimg.com/profile_images/1848910652808613888/r81-u5pP_400x400.jpg"
+    imageTitle: "Foto de Sherlock Ramos"
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: "Twitter"
+        url: "https://x.com/GatoMaconhado_"
+      - name: "GitHub"
+        url: "https://github.com/sherlockramos"
+  socialIcons:
+    - name: "Twitter"
+      url: "https://twitter.com/GatoMaconhado_"
+    - name: "Instagram"
+      url: "https://instagram.com/prof.gabrielramos"
+    - name: "GitHub"
+      url: "https://github.com/profgabrielramos-ai"
+  assets:
+    favicon: "images/favicon.ico"
+    customCSS: ["css/custom.css"]
+  defaultTheme: "auto"
+  ShowBreadCrumbs: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 2
+    - identifier: contato
+      name: Contato
+      url: /contato/
+      weight: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      table: true
+      linkify: true
+      strikethrough: true
+      taskList: true
+      typographer: true
+````
